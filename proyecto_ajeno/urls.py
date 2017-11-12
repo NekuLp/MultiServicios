@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^contacto/', views.contacto, name='contacto'),
-    url(r'^noticias/', views.contacto, name='noticias'),
+    url(r'^conocenos/', views.conocenos, name='conocenos'),
+    url(r'^servicios/', views.servicios, name='servicios'),
 ]
