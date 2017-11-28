@@ -1196,7 +1196,7 @@ div#grid-gallery {
 
 #services {
 	padding: 5em 0;
-	background: url(../images/tech.png) no-repeat;
+	background: url(../images/w2.jpg) no-repeat;
 }
 
 
@@ -1207,7 +1207,7 @@ div#grid-gallery {
 
 .testimonial {
 	padding: 5em 0;
-	background: url(../images/tsbg.jpg) no-repeat;
+	background: url(../images/w2.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -1285,6 +1285,28 @@ div#grid-gallery {
 
 
 /*--//testimonial--*/
+
+.testi-grid .fslider-grid{
+	background-color: transparent;
+}
+
+.testi-img .testi-text{
+	color: orange;
+	text-shadow: 3px 3px 2px #000;
+	font-weight: 600;
+}
+
+.testi-img{
+	margin-bottom: 30px;
+}
+
+.testi-text.description{
+	background-color: #fff;
+	padding: 20px 30px;
+	border-radius: 34px;
+}
+
+
 
 
 /*--contant-map style starts here--*/
