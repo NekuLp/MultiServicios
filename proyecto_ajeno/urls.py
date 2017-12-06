@@ -21,7 +21,12 @@ from sitio import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^contacto/', views.contacto, name='contacto'),
-    url(r'^conocenos/', views.conocenos, name='conocenos'),
-    url(r'^servicios/', views.servicios, name='servicios'),
+    url(r'^contacto/$', views.contacto, name='contacto'),
+    url(r'^conocenos/$', views.conocenos, name='conocenos'),
+    url(r'^servicios/$', views.servicios, name='servicios'),
+    url(r'^solicitud/$', views.solicitud, name='solicitud'),
+    url(r'^solicitud-enviada/$', views.solicitud_enviada, name='solicitud_enviada'),
+    url(r'^lista-solicitud/$', views.lista_solicitud, name='lista_solicitud'),
+    url(r'^solicitud/(?P<id_solicitud>[\w\-]+)/$', views.solicitud_detalles, name='solicitud_detalles'),
+    url(r'^eliminar-solicitud/(?P<id_solicitud>[\w\-]+)/$', views.solicitud_eliminar, name='solicitud_eliminar'),
 ]

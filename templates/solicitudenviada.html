@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron text-center ">
+          <h1 class="display-3">¡Éxito!</h1>
+          <p class="lead">La solicitud se ha creado con éxito y se ha guardado en la base de datos.</p>
+          <hr class="my-4">
+          <p>Haga click en el botón para crear otra solicitud.</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'solicitud' %}" role="button">Volver</a>
+          </p>
+        </div>
+    </div>
+
+
+{% endblock content %}

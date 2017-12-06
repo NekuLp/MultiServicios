@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h2>{{ solicitud.nombre }}</h2>
+        <h3>{{ solicitud.telefono }}</h3>
+        <h3>{{ solicitud.correo }}</h3>
+        <h3>{{ solicitud.servicio }}</h3>
+        <p>{{ solicitud.descripcion }}</p>
+    </div>
+{% endblock content %}

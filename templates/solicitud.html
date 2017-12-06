@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container" style="background-color: gainsboro; padding: 30px">
+        <h2>Crear solicitud</h2>
+        <br>
+        <div class="col-md-6">
+        <form method="POST" class="company-form">
+            {% csrf_token %}
+            {% for field in form %}
+                <fieldset class="form-group">
+                    <label class="control-label">{{ field.label }}</label>
+                    <label class="control-label text-danger">{{ field.errors }}</label>
+                    {% if field.value %}
+                        {% if field.name == "descripcion" %}
+                            <textarea rows="4" class="form-control" name="{{ field.name }}" value="{{ field.value }}"></textarea>
+                        {% elif field.name == "servicio" %}
+                            <select name="{{ field.name }}" id="">
+                                <option value="Lavado de motor">Lavado de motor</option>
+                                <option value="Hidro Lavadoras">Hidro Lavadoras</option>
+                                <option value="Compresores">Compresores</option>
+                                <option value="Maquinas de ejercicio">Maquinas de ejercicio</option>
+                            </select>
+                        {% else %}
+                            <input type="text" class="form-control" name="{{ field.name }}" value="{{ field.value }}">
+                        {% endif %}
+                    {% else %}
+                        {% if field.name == "descripcion" %}
+                            <textarea rows="4" class="form-control" name="{{ field.name }}" placeholder="Detalle sobre el servicio solicitado"></textarea>
+                        {% elif field.name == "servicio" %}
+                            <select name="{{ field.name }}" id="">
+                                <option value="deste">deste</option>
+                                <option value="deste2">deste 2  </option>
+                            </select>
+                        {% else %}
+                            <input type="text" class="form-control" name="{{ field.name }}" placeholder="{{ field.label }}">
+                        {% endif %}
+                    {% endif %}
+                </fieldset>
+            {% endfor %}
+            <button type="submit" class="save btn btn-primary">Guardar</button>
+        </form>
+        </div>
+    </div>
+
+
+{% endblock content %}
